@@ -12,12 +12,12 @@ import {
 } from '@chakra-ui/react'
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
 
     return (
-        <div className='Navbar absolute' id="Navbar">
+        <div className='Navbar fixed border-none' id={props.id}>
             <VisuallyHidden>
                 Open navbar
             </VisuallyHidden>
@@ -45,17 +45,17 @@ export default function Navbar() {
                                 </VisuallyHidden>
                                 Welcome
                             </a>
+                            <a href="#About" className='nav-link hover:bg-emerald-500 hover:text-white'>
+                                <VisuallyHidden>
+                                    Get To Know Me section
+                                </VisuallyHidden>
+                                Get To Know Me!
+                            </a>
                             <a href="#" className='nav-link hover:bg-emerald-500 hover:text-white'>
                                 <VisuallyHidden>
                                     Projects section
                                 </VisuallyHidden>
                                 Projects
-                            </a>
-                            <a href="#" className='nav-link hover:bg-emerald-500 hover:text-white'>
-                                <VisuallyHidden>
-                                    Get to know me section
-                                </VisuallyHidden>
-                                Get to Know Me!
                             </a>
                             <a href="#" className='nav-link hover:bg-emerald-500 hover:text-white'>
                                 <VisuallyHidden>

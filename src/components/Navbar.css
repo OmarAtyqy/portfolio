@@ -1,6 +1,6 @@
 .Navbar {
-    top: 50%;
-    right: 5%;
+    top: calc(0.5 * 100vh);
+    right: 3%;
 }
 
 .Drawer-body {
