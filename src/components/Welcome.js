@@ -1,20 +1,31 @@
 import "./Welcome.css"
+import React from "react";
+import { VisuallyHidden } from "@chakra-ui/react";
 
 
 // Welcome section
-export default function Welcome () {
-
+export default function Welcome() {
 
     return (
-        <div className="Welcome w-screen h-screen grid place-items-center">
-            <div className="Welcome-content grid place-items-center">
-                <p className="Welcome-text text-center">
-                    Hello, I'm Omar El Atyqy.
+        <div className="Welcome h-screen grid place-items-center" id="Welcome">
+            <div className="Welcome-content grid place-items-center space-y-10 text-white">
+                <VisuallyHidden>
+                    <p className="Welcome-text text-center ">
+                        Hello, I'mOmar El Atyqy.
+                        <br />
+                        I'm a web developper, data scientist and a passionate geek.
+                    </p>
+                </VisuallyHidden>
+                <p className="Welcome-text text-center ">
+                    Hello, I'm <span className="Welcome-name text-emerald-400">Omar El Atyqy</span>.
                     <br />
-                    I'm a Fullstack Web Developper
+                    I'm a <span className="Welcome-job text-emerald-400 txt-rotate" data-period="1000"
+                        data-rotate='[ "web developper", "data scientist", "passionate geek" ]'></span>.
                 </p>
-                <hr className="w-1/2" />
-                <a className="Welcome-buttom">
+                <a href="#" className="Welcome-button hover:bg-emerald-500 py-4 px-6">
+                    <VisuallyHidden>
+                        let's have a look!
+                    </VisuallyHidden>
                     Let's have a look!
                 </a>
             </div>

@@ -1,0 +1,15 @@
+.Welcome {
+    background-image: url("../../public/images/background.png");
+}
+
+.Welcome-text {
+    font-size: 32pt;
+    line-height: 36pt;
+    font-weight: 400;
+}
+
+.Welcome-button {
+    font-size: 15pt;
+    border: 2px solid #fff;
+    transition-duration: 0.5s;
+}
