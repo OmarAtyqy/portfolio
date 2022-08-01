@@ -1,0 +1,58 @@
+.Projects {
+    background-color: #252934;
+}
+
+.Projects-title h1 {
+    font-size: 32pt;
+}
+
+.Image {
+    overflow: hidden;
+}
+
+.Image-img,
+.Image-text {
+    width: 100%;
+    height: 100%;
+}
+
+.Image-text {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.Image-text:hover {
+    opacity: 0.95;
+    background-color: white;
+}
+
+.Image-text-top h3 {
+    font-size: 20pt;
+    font-weight: 500;
+}
+
+.Image-text-top p {
+    font-size: 14pt;
+}
+
+/* Media Queries */
+@media screen and (min-width: 480px) {
+    .Image {
+        width: 50vw;
+        height: 22.22vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Image {
+        width: 35vw;
+        height: 15.56vw;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .Image {
+        width: 26vw;
+        height: 11.55vw;
+    }
+}
