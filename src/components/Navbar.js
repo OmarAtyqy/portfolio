@@ -57,7 +57,7 @@ export default function Navbar(props) {
                                 </VisuallyHidden>
                                 Projects
                             </a>
-                            <a href="#" className='nav-link hover:bg-emerald-500 hover:text-white'>
+                            <a href="#Contact" className='nav-link hover:bg-emerald-500 hover:text-white'>
                                 <VisuallyHidden>
                                     Contact section
                                 </VisuallyHidden>

@@ -1,0 +1,12 @@
+.Contact-title h1 {
+    font-size: 32pt;
+    font-weight: 500;
+}
+
+.Contact-title p {
+    font-size: 17pt;
+}
+
+.Contact-message {
+    min-height: 200px !important;
+}

@@ -8,6 +8,8 @@
 
 .Image {
     overflow: hidden;
+    width: 80vw;
+    height: 35.55vw;
 }
 
 .Image-img,
@@ -22,8 +24,24 @@
 }
 
 .Image-text:hover {
-    opacity: 0.95;
+    opacity: 0.98;
     background-color: white;
+}
+
+.Image-text-top, .Image-text-bot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Image-text-top {
+    top: 3%;
+}
+
+.Image-text-bot {
+    bottom: 3%;
 }
 
 .Image-text-top h3 {
@@ -32,10 +50,21 @@
 }
 
 .Image-text-top p {
-    font-size: 14pt;
+    font-size: 2rem;
 }
 
 /* Media Queries */
+@media screen and (max-width: 480px) {
+    .Image-text-top h3 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    
+    .Image-text-top p {
+        font-size: 16px;
+    }
+}
+
 @media screen and (min-width: 480px) {
     .Image {
         width: 50vw;
