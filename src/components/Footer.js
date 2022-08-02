@@ -7,14 +7,14 @@ const Icon = (props) => {
         window.open(props.url)
     }
 
-    let className = 'Icon text-center border border-solid border-emerald-500 py-4 px-5 cursor-pointer';
+    let className = 'Icon text-center py-5 px-5 cursor-pointer';
 
     if (props.icon === "fa-solid fa-angles-up") {
         click = () => {
             window.open("#Welcome", "_self")
         }
 
-        className += " bg-emerald-500";
+        className += " Up-Icon"
     }
 
     return (
@@ -27,9 +27,9 @@ const Icon = (props) => {
 
 export default function Footer() {
     return (
-        <div className='Footer p-20 grid place-items-center'>
+        <div className='Footer p-10 grid place-items-center'>
             <div className='Footer-container grid gap-y-10'>
-                <div className='Go-up flex justify-center mb-8'>
+                <div className='Go-up flex justify-center'>
                     <div className='w-fit'>
                         <Icon icon="fa-solid fa-angles-up" url="#Welcome" />
                     </div>
