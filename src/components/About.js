@@ -42,8 +42,30 @@ const Me = () => {
 
 const Skills = () => {
 
-    const skills = ["HTML", "CSS", "Javascript", "Python", "React", "Data Science"];
-    const percentages = [90, 90, 70, 80, 50, 40];
+    const skills = [{
+        skill: "HTML",
+        percentage: 90
+    },
+    {
+        skill: "CSS",
+        percentage: 90
+    },
+    {
+        skill: "Javascript",
+        percentage: 70
+    },
+    {
+        skill: "Python",
+        percentage: 80
+    },
+    {
+        skill: "React",
+        percentage: 50
+    },
+    {
+        skill: "Data Science",
+        percentage: 40
+    }];
 
     return (
         <div className='Skills w-5/6 grid gap-y-10 mt-10 lg:mt-0'>
@@ -51,10 +73,10 @@ const Skills = () => {
                 return (
                     <div key={index}>
                         <div className='flow-root'>
-                            <Badge className='float-left'>{item}</Badge>
-                            <Badge className='float-right'>{percentages[index]}%</Badge>
+                            <Badge className='float-left'>{item.skill}</Badge>
+                            <Badge className='float-right'>{item.percentage}%</Badge>
                         </div>
-                        <Progress colorScheme='green' value={percentages[index]} />
+                        <Progress colorScheme='green' value={item.percentage} />
                     </div>
                 );
             })}

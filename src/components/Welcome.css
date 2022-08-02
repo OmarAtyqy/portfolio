@@ -8,8 +8,16 @@
     font-weight: 400;
 }
 
+.Welcome-text span {
+    font-size: 29pt;
+}
+
 .Welcome-button {
     font-size: 15pt;
     border: 2px solid #fff;
     transition-duration: 0.5s;
+}
+
+.Typewriter {
+    display: inline-block;
 }
