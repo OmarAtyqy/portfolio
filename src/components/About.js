@@ -7,7 +7,7 @@ import profile_pic from '../images/me.jfif'
 const Priority = (props) => {
 
     return (
-        <Flip left>
+        <Flip left delay={props.time}>
             <div className='Priority grid place-items-center gap-y-4'>
                 <div className='Priority-icon border-2 border-solid border-white bg-emerald-500 p-8 rounded-2xl'>
                     {props.icon}
@@ -96,22 +96,26 @@ export default function About(props) {
     const items = [{
         icon: <TimeIcon w={12} h={12} color="white" />,
         title: "Fast",
-        text: "Fast load times and lag free interaction, my highest priority."
+        text: "Fast load times and lag free interaction, my highest priority.",
+        time: 0
     },
     {
         icon: <PlusSquareIcon w={12} h={12} color="white" />,
         title: "Responsive",
-        text: "My layouts will work on any device, big or small."
+        text: "My layouts will work on any device, big or small.",
+        time: 250
     },
     {
         icon: <SettingsIcon w={12} h={12} color="white" />,
         title: "Intuitive",
-        text: "Strong preference for easy to use, intuitive UX/UI."
+        text: "Strong preference for easy to use, intuitive UX/UI.",
+        time: 500
     },
     {
         icon: <EditIcon w={12} h={12} color="white" />,
         title: "Dynamic",
-        text: "Websites don't have to be static, I love making pages come to life."
+        text: "Websites don't have to be static, I love making pages come to life.",
+        time: 750
     }]
 
     return (
@@ -127,7 +131,7 @@ export default function About(props) {
                 </div>
                 <div className='About-priorities grid grid-cols-2 gap-y-8 lg:gap-y-0 lg:grid-cols-4'>
                     {items.map((item, index) => {
-                        return <Priority key={index} icon={item.icon} title={item.title} text={item.text} />
+                        return <Priority key={index} icon={item.icon} title={item.title} text={item.text} time={item.time}/>
                     })}
                 </div>
                 <div className='About-me grid grid-cols-1 lg:grid-cols-2'>

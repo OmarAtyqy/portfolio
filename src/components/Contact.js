@@ -16,7 +16,7 @@ export default function Contact(props) {
                         <p className='text-emerald-600 text-center'>Have a question or want to work together?</p>
                     </div>
                 </Fade>
-                <Zoom>
+                <Zoom delay={500}>
                     <div className='Contact-form'>
                         <form>
                             <FormControl isRequired className='grid gap-y-2'>

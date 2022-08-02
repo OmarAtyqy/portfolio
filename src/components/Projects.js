@@ -11,7 +11,7 @@ const ProjectImage = (props) => {
     }
 
     return (
-        <Fade bottom>
+        <Fade bottom delay={props.time}>
             <div className='Image relative grid place-items-center border rounded border-solid border-emerald-500'>
                 <Box className='Image-img absolute top-0 left-0'>
                     <Image src={props.source} />
@@ -41,25 +41,28 @@ const Gallery = () => {
         title: "e-M'Agg",
         source: emagg,
         technologies: "Django / MangoDB",
-        link: "https://github.com/OmarAtyqy/news-aggregator"
+        link: "https://github.com/OmarAtyqy/news-aggregator",
+        time: 800
     },
     {
         title: "Raindrop",
         source: raindrop,
         technologies: "HTML / CSS / Javascript",
-        link: "https://github.com/OmarAtyqy/rain-drop"
+        link: "https://github.com/OmarAtyqy/rain-drop",
+        time: 1300
     },
     {
         title: "Portfolio",
         source: portfolio,
         technologies: "React JS / Chakra-UI",
-        link: "#Welcome"
+        link: "#Welcome",
+        time: 1800
     }];
 
     return (
         <div className='Gallery h-fit grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 place-items-center gap-y-5 gap-x-3'>
             {projects.map((item, index) => {
-                return <ProjectImage key={index} source={item.source} technologies={item.technologies} link={item.link} title={item.title} />
+                return <ProjectImage key={index} source={item.source} technologies={item.technologies} link={item.link} title={item.title} time={item.time}/>
             })}
         </div>
     );
