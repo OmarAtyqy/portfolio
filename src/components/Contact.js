@@ -1,9 +1,28 @@
 import './Contact.css'
+import { useRef } from 'react';
 import { Input, Button, FormControl, Textarea } from '@chakra-ui/react';
 import { Fade, Zoom } from 'react-reveal';
+import emailjs from '@emailjs/browser';
 
 
 export default function Contact(props) {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_jm3lpta', 'template_0fatspu', form.current, '4zL5cWeaLfx0mgiSg')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        e.target.reset()
+    };
+
+
     return (
         <div className='Contact grid place-items-center p-20' id={props.id}>
             <div className='Contact-container grid gap-y-10'>
@@ -18,11 +37,11 @@ export default function Contact(props) {
                 </Fade>
                 <Zoom delay={500}>
                     <div className='Contact-form'>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <FormControl isRequired className='grid gap-y-2'>
-                                <Input placeholder='Name' type='text' />
-                                <Input placeholder='Email' type='email' />
-                                <Textarea placeholder='Message' className='Contact-message' />
+                                <Input placeholder='Name' name="user_name" type='text' />
+                                <Input placeholder='Email' name="user_mail" type='email' />
+                                <Textarea placeholder='Message' name="user_msg" className='Contact-message' />
                                 <div className='Submit-container'>
                                     <Button type='submit' colorScheme='teal' className='float-right'>
                                         Submit

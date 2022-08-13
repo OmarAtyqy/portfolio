@@ -42,21 +42,21 @@ const Gallery = () => {
         source: emagg,
         technologies: "Django / MangoDB",
         link: "https://github.com/OmarAtyqy/news-aggregator",
-        time: 800
+        time: 600
     },
     {
         title: "Raindrop",
         source: raindrop,
         technologies: "HTML / CSS / Javascript",
         link: "https://github.com/OmarAtyqy/rain-drop",
-        time: 1300
+        time: 1000
     },
     {
         title: "Portfolio",
         source: portfolio,
         technologies: "React JS / Chakra-UI",
         link: "#Welcome",
-        time: 1800
+        time: 1500
     }];
 
     return (
